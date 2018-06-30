@@ -1,0 +1,518 @@
+body {
+    background-color: black;
+    margin: 0;
+}
+
+/* HEADER */
+
+header {
+    margin-top: 30px;
+}
+
+header img {
+    display: block;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* header stop */
+
+/* NAVIGATION */
+
+nav {
+    position: fixed;
+    top: 20px;
+    left: 0;
+}
+
+nav a {
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+nav a:hover {
+    left: 0;
+}
+
+#about {
+    top: 20px;
+    background-color: #4CAF50;
+}
+
+#create {
+    top: 80px;
+    background-color: #2196F3;
+}
+
+#projects {
+    top: 140px;
+    background-color: #f44336;
+}
+
+#contact {
+    top: 200px;
+    background-color: #555
+}
+
+/* Navigation stop */
+
+/* LOGIN */
+
+.login {
+    position: fixed;
+    top: 20px;
+    right: 0;
+}
+
+.login a {
+    position: absolute;
+    right: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    text-align: right;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px 0 0 5px;
+}
+
+.login a:hover {
+    right: 0;
+}
+
+#login {
+    top: 20px;
+    background-color: #4CAF50;
+}
+
+/* Login stop */
+
+/* LOGIN FORM */
+
+.loginForm {
+    margin: 100px auto;
+    width: 300px;
+    padding: 30px 25px;
+    background:black;
+}
+
+
+.login-input {
+    width: 285px;
+    height: 50px;
+    margin-bottom: 25px;
+    padding-left: 10px;
+    font-size: 15px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-input:focus {
+    border-color: #6e8095;
+    outline: none;
+}
+
+.login-button {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    background: #f0776c;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: 0;
+}
+/* Login form stop */
+
+/* MAIN */
+
+main>div {
+    margin-left: 30px;
+}
+
+p {
+    color: white;
+}
+
+/* ABOUT FORM */
+
+.tabs {
+    text-align: center;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+ul.tabs {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+ul.tabs li {
+    background: none;
+    color: #222;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+ul.tabs li.current {
+    background: #ededed;
+    color: #222;
+}
+
+.tab-content {
+    display: none;
+    background: #ededed;
+    padding: 15px;
+}
+
+.tab-content.current {
+    display: inherit;
+}
+/* About form stop */
+
+/* CREATE FORM */
+
+/*form styles*/
+#msform {
+	width: 400px;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #27AE60;
+	color: white;
+}
+/* Create form stop */
+
+
+/* CONTACT FORM */
+
+#contactForm {
+    margin: 20px 150px;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical/* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+/* contact form stop */
+/* Main stop */
+
+/* FOOTER */
+
+.social-networks {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    text-align: center;
+}
+
+.social-networks li {
+    display: inline-block;
+}
+
+.social-networks a {
+    display: block;
+    position: relative;
+    margin: 0 7px;
+    width: 68px;
+    height: 68px;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+.social-networks a:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    margin-top: -50%;
+    margin-left: -50%;
+    border-radius: 100px;
+    transition: all 400ms;
+}
+
+.social-networks a:after {
+    position: relative;
+    display: block;
+    font-family: 'icomoon';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    color: #fff;
+    font-size: 26px;
+    line-height: 66px;
+}
+
+.social-networks a:hover,
+.social-networks a:focus {
+    text-decoration: none;
+}
+
+.social-networks.spin-icon a:hover:after,
+.social-networks.spin-icon a:focus:after {
+    transition: transform 0.4s ease-out;
+    transform: rotateZ(360deg);
+}
+
+.social-networks.bounce a:hover,
+.social-networks.bounce a:focus {
+    animation: bounce 1s;
+}
+
+.social-networks .icon-linkedin:after {
+    content: url("images/linkedin.png");
+}
+
+.social-networks .icon-facebook:after {
+    content: url("images/facebook.png");
+}
+
+.social-networks .icon-twitter:after {
+    content: url("images/twitter.png");
+}
+
+.social-networks .icon-github:after {
+    content: url("images/github.png");
+}
+
+.social-networks .icon-instagram:after {
+    content: url("images/instagram.png");
+}
+
+.social-networks .icon-skype:after {
+    content: url("images/skype.png");
+}
+
+.social-networks .icon-google:after {
+    content: url("images/google.png");
+}
+
+.social-networks .icon-pinterest:after {
+    content: url("images/pinterest.png");
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    53%,
+    80%,
+    100% {
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translate3d(0, 0, 0);
+    }
+    40% {
+        transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -6px, 0);
+    }
+    70% {
+        transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -4px, 0);
+    }
+    90% {
+        transform: translate3d(0, -2px, 0);
+    }
+}
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding-top: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+footer img {
+    height: 25px;
+}
+
+footer p {
+    text-align: right;
+    margin: 0;
+    padding: 0px 15px 10px;
+}
+/* Footer stop */
+
+/* MENU BAR */
+
+.menu {
+    line-height: 18px;
+    text-align: left;
+    overflow: hidden;
+    width: 175px;
+    list-style-type: none;
+    padding: 0;
+    display: table-cell;
+}
+/* Menu bar stop */
