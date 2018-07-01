@@ -41,14 +41,14 @@
 
     <!-- Login -->
     <div class="login">
-        <a href="#" id="login">Login</a>
+        <a href="#" id="login">Log in</a>
     </div>
 
     <!-- Login form-->
     <form id="loginForm" class="loginForm" style="display: none;">
         <input type="text" class="login-input" placeholder="Email Adress" autofocus>
         <input type="password" class="login-input" placeholder="Password">
-        <input type="submit" value="Lets Go" class="login-button">
+        <input type="submit" value="Let`s Go" class="login-button">
     </form>
 
     <!-- Main page -->
@@ -130,37 +130,77 @@
             <form id="msform">
                 <!-- progressbar -->
                 <ul id="progressbar">
-                    <li class="active">Account Setup</li>
-                    <li>Social Profiles</li>
-                    <li>Personal Details</li>
+                    <li class="active">Personal info</li>
+                    <li>Languages</li>
+                    <li>Skills</li>
+                    <li>Education</li>
+                    <li>Last job</li>
+                    <li>About you</li>
+
                 </ul>
                 <!-- fieldsets -->
                 <fieldset>
-                    <h2 class="fs-title">Create your account</h2>
-                    <h3 class="fs-subtitle">This is step 1</h3>
-                    <input type="text" name="email" placeholder="Email" />
-                    <input type="password" name="pass" placeholder="Password" />
-                    <input type="password" name="cpass" placeholder="Confirm Password" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <h2 class="fs-title">Personal Info</h2>
+                    <input type="text" class="input" placeholder="First Name" />
+                    <input type="text" class="input" placeholder="Last Name" />
+                    <input type="phone" class="input" placeholder="Phone" />
+                    <input type="email" class="input" placeholder="Email" />
+                    <input type="button" class="next action-button" value="Next" />
                 </fieldset>
                 <fieldset>
-                    <h2 class="fs-title">Social Profiles</h2>
-                    <h3 class="fs-subtitle">Your presence on the social network</h3>
-                    <input type="text" name="twitter" placeholder="Twitter" />
-                    <input type="text" name="facebook" placeholder="Facebook" />
-                    <input type="text" name="gplus" placeholder="Google Plus" />
-                    <input type="button" name="previous" class="previous action-button" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <h2 class="fs-title">Languages</h2>
+                    <input type="text" class="input" placeholder="Mother tongue" />
+                    <input type="text" class="input" placeholder="1st language" />
+                    <input type="range" class="input" min="0" max="10">
+                    <input type="text" class="input" placeholder="2nd language" />
+                    <input type="range" class="input" min="0" max="10">
+                    <input type="button" class="previous action-button" value="Previous" />
+                    <input type="button" class="next action-button" value="Next" />
+                </fieldset>
+
+                <fieldset>
+                    <h2 class="fs-title">Skills</h2>
+                    <input type="text" class="input" placeholder="Skill one" />
+                    <input type="range" class="input" min="0" max="10">
+                    <input type="text" class="input" placeholder="Skill two" />
+                    <input type="range" class="input" min="0" max="10">
+                    <input type="text" class="input" placeholder="Skill three" />
+                    <input type="range" class="input" min="0" max="10">
+                    <input type="button" class="previous action-button" value="Previous" />
+                    <input type="button" class="next action-button" value="Next" />
                 </fieldset>
                 <fieldset>
-                    <h2 class="fs-title">Personal Details</h2>
-                    <h3 class="fs-subtitle">We will never sell it</h3>
-                    <input type="text" name="fname" placeholder="First Name" />
-                    <input type="text" name="lname" placeholder="Last Name" />
-                    <input type="text" name="phone" placeholder="Phone" />
-                    <textarea name="address" placeholder="Address"></textarea>
-                    <input type="button" name="previous" class="previous action-button" value="Previous" />
-                    <input type="submit" name="submit" class="submit action-button" value="Submit" />
+                    <h2 class="fs-title">Education</h2>
+                    <input type="text" class="input" placeholder="University" />
+                    <input type="text" class="input" placeholder="Speciality" />
+                    <input type="text" class="input" placeholder="Degree" />
+                    <div class="dataBox">
+                        <input placeholder="From" class="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+                        <input placeholder="To" class="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+                    </div>
+                    <textarea class="input" cols="30" rows="3" placeholder="Write about it..."></textarea>
+                    <input type="button" class="previous action-button" value="Previous" />
+                    <input type="button" class="next action-button" value="Next" />
+                </fieldset>
+
+                <fieldset>
+                    <h2 class="fs-title">Last Job</h2>
+                    <input type="text" class="input" placeholder="Position" />
+                    <input type="text" class="input" placeholder="Entreprise" />
+                    <div class="dataBox">
+                        <input placeholder="From" class="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+                        <input placeholder="To" class="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+                    </div>
+                    <textarea class="input" cols="30" rows="3" placeholder="Write about it..."></textarea>
+                    <input type="button" class="previous action-button" value="Previous" />
+                    <input type="button" class="next action-button" value="Next" />
+                </fieldset>
+
+                <fieldset>
+                    <h2 class="fs-title">About you</h2>
+                    <textarea class="input" cols="30" rows="10" placeholder="Write about it..."></textarea>
+                    <input type="button" class="previous action-button" value="Previous" />
+                    <input type="submit" class="submit action-button" value="Submit" />
                 </fieldset>
             </form>
 
@@ -168,10 +208,7 @@
 
         <!-- Project form -->
         <div id="projectsForm" style="display: none">
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque
-                et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-                repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-
+            
         </div>
 
         <!-- Contact form -->

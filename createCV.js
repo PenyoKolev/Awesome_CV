@@ -49,7 +49,30 @@ $(function () {
         $("#" + tab_id).addClass('current');
     })
 
-})
+});
+// Login
+$(function(){
+    $(".login-button").click(function(){
+        $("#login").text("Log out")
+        .css({"background-color":"black",
+            "color":"white"
+        });
+        $("#loginForm").css("display", "none");
+        $("header img").toggle("slow");
+        $("#footer").toggle("slow");
+        $(".login").attr("class", "logout");
+        $("#loginForm").empty()
+        .append("<form action='http://google.com'><input type='submit' value='Leave this site?' style='height:150px; width:250px'></form>");
+    });
+});
+// Logout
+$(function(){
+    $("#loginForm").click(function(){
+        $(window).unload(function(){
+            return "Bye now!";
+        })
+    });
+});
 
 // Create
 var current_fs, next_fs, previous_fs; //fieldsets
