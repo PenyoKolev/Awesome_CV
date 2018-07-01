@@ -30,7 +30,7 @@ nav a {
     position: absolute;
     left: -80px;
     transition: 0.3s;
-    padding: 15px;
+    padding: 15px 0;
     width: 100px;
     text-decoration: none;
     font-size: 20px;
@@ -107,7 +107,7 @@ nav a:hover {
 
 
 .login-input {
-    width: 285px;
+    width: 100%;
     height: 50px;
     margin-bottom: 25px;
     padding-left: 10px;
@@ -191,7 +191,7 @@ ul.tabs li.current {
 /* CREATE FORM */
 
 #msform {
-	width: 600px;
+	width: 800px;
 	margin: 50px auto;
 	text-align: center;
 	position: relative;
@@ -202,7 +202,8 @@ ul.tabs li.current {
 	border: 0 none;
 	border-radius: 3px;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-	padding: 20px 30px;
+    padding: 20px 30px;
+    padding-top: 0;
 	box-sizing: border-box;
 	width: 80%;
 	margin: 0 15%;
@@ -220,20 +221,23 @@ ul.tabs li.current {
 	padding: 15px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
-	margin-bottom: 10px;
+    margin-bottom: 0;
+    margin-top: 6px;
 	width: 100%;
 	box-sizing: border-box;
 	font-family: montserrat;
 	color: black;
 	font-size: 13px;
 }
+
+
 .dataBox .date {
     width: 49%;
     display: inline-box;
     padding: 15px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 	box-sizing: border-box;
 	font-family: montserrat;
 	color: black;
@@ -261,7 +265,7 @@ ul.tabs li.current {
 }
 
 #progressbar {
-    margin-bottom: 30px;
+    margin-bottom: 0;
     margin-left: 75px;
 	overflow: hidden;
     counter-reset: step;
@@ -313,6 +317,21 @@ ul.tabs li.current {
 /* Create form stop */
 
 /* PROJECT FORM*/
+#projectsForm {
+    margin: 100px;
+    background-color: lightgrey;
+}
+#projectsForm html,body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Roboto", sans-serif;
+}
+#projectsForm h1, h2, h3, h4, h5, h6, p {
+    color: black;
+}
+.w3-row-padding >* {
+    margin-top: 16px;
+}
+
+
 
     
 /* Project form stop */
@@ -320,8 +339,9 @@ ul.tabs li.current {
 /* CONTACT FORM */
 
 #contactForm {
-    margin: 20px 150px;
-}
+    width: 600px;
+	margin: 50px auto;
+	text-align: center;}
 
 /* Style inputs with type="text", select elements and textareas */
 
@@ -329,20 +349,16 @@ input[type=text],
 select,
 textarea {
     width: 100%;
-    /* Full width */
     padding: 12px;
-    /* Some padding */
     border: 1px solid #ccc;
-    /* Gray border */
     border-radius: 4px;
-    /* Rounded borders */
     box-sizing: border-box;
-    /* Make sure that padding and width stays in place */
     margin-top: 6px;
-    /* Add a top margin */
-    margin-bottom: 16px;
-    /* Bottom margin */
-    resize: vertical/* Allow the user to vertically resize the textarea (not horizontally) */
+    margin-bottom: 6px;
+}
+#country {
+    margin-top: 6px;
+    margin-bottom: 12px;
 }
 
 /* Style the submit button with a specific background color etc */
@@ -494,7 +510,7 @@ input[type=submit]:hover {
     }
 }
 
-footer {
+.footer {
     text-align: center;
     color: white;
     background-color: black;
@@ -504,12 +520,13 @@ footer {
     bottom: 0;
 }
 
-footer img {
+.footer img {
     height: 25px;
 }
 
-footer p {
+.footer p {
     text-align: right;
+    color: white;
     margin: 0;
     padding: 0px 15px 10px;
 }

@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/png" href="D:\User\Pictures\Saved Pictures\Voodoo favicon.ico" />
     <link rel="stylesheet" href="createCV.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>TODO</title>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
     </script>
@@ -46,7 +50,7 @@
 
     <!-- Login form-->
     <form id="loginForm" class="loginForm" style="display: none;">
-        <input type="text" class="login-input" placeholder="Email Adress" autofocus>
+        <input type="email" class="login-input" placeholder="Email Adress">
         <input type="password" class="login-input" placeholder="Password">
         <input type="submit" value="Let`s Go" class="login-button">
     </form>
@@ -141,102 +145,244 @@
                 <!-- fieldsets -->
                 <fieldset>
                     <h2 class="fs-title">Personal Info</h2>
-                    <input type="text" class="input" placeholder="First Name" />
-                    <input type="text" class="input" placeholder="Last Name" />
-                    <input type="phone" class="input" placeholder="Phone" />
-                    <input type="email" class="input" placeholder="Email" />
-                    <input type="button" class="next action-button" value="Next" />
+                    <input type="text" id="firstNameInput" class="input" placeholder="First Name" />
+                    <input type="text" id="lastNameInput" class="input" placeholder="Last Name" />
+                    <input type="text" id="professionInput" class="input" placeholder="Profession" />
+                    <input type="text" id="adressInput" class="input" placeholder="Adress" />
+                    <input type="phone" id="phoneInput" class="input" placeholder="Phone" />
+                    <input type="email" id="emailInput" class="input" placeholder="Email" />
+                    <input type="button" id="firstButton" class="next action-button" value="Next" />
                 </fieldset>
                 <fieldset>
                     <h2 class="fs-title">Languages</h2>
-                    <input type="text" class="input" placeholder="Mother tongue" />
-                    <input type="text" class="input" placeholder="1st language" />
+                    <input type="text" id="motherTongueInput" class="input" placeholder="Mother tongue" />
+                    <input type="text" id="firstLanguageInput" class="input" placeholder="1st language" />
                     <input type="range" class="input" min="0" max="10">
-                    <input type="text" class="input" placeholder="2nd language" />
+                    <input type="text" id="secondLanguageInput" class="input" placeholder="2nd language" />
                     <input type="range" class="input" min="0" max="10">
                     <input type="button" class="previous action-button" value="Previous" />
-                    <input type="button" class="next action-button" value="Next" />
+                    <input type="button" id="secondButton" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset>
                     <h2 class="fs-title">Skills</h2>
-                    <input type="text" class="input" placeholder="Skill one" />
+                    <input type="text" id="firstSkillInput" class="input" placeholder="Skill one" />
                     <input type="range" class="input" min="0" max="10">
-                    <input type="text" class="input" placeholder="Skill two" />
+                    <input type="text" id="secondSkillInput" class="input" placeholder="Skill two" />
                     <input type="range" class="input" min="0" max="10">
-                    <input type="text" class="input" placeholder="Skill three" />
+                    <input type="text" id="thirdSkillInput" class="input" placeholder="Skill three" />
                     <input type="range" class="input" min="0" max="10">
                     <input type="button" class="previous action-button" value="Previous" />
-                    <input type="button" class="next action-button" value="Next" />
+                    <input type="button" id="thirdButton" class="next action-button" value="Next" />
                 </fieldset>
+
                 <fieldset>
                     <h2 class="fs-title">Education</h2>
-                    <input type="text" class="input" placeholder="University" />
-                    <input type="text" class="input" placeholder="Speciality" />
-                    <input type="text" class="input" placeholder="Degree" />
+                    <input id="universityInput" type="text" class="input" placeholder="University" />
+                    <input id="specialityInput" type="text" class="input" placeholder="Speciality" />
+                    <input id="degreeInput" type="text" class="input" placeholder="Degree" />
                     <div class="dataBox">
-                        <input placeholder="From" class="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
-                        <input placeholder="To" class="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+                        <input placeholder="From" class="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="educationFromInput">
+                        <input placeholder="To" class="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="educationToInput">
                     </div>
-                    <textarea class="input" cols="30" rows="3" placeholder="Write about it..."></textarea>
+                    <textarea id="aboutEducationInput" class="input" cols="30" rows="3" placeholder="Write about it..."></textarea>
                     <input type="button" class="previous action-button" value="Previous" />
-                    <input type="button" class="next action-button" value="Next" />
+                    <input type="button" id="fourthButton" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset>
                     <h2 class="fs-title">Last Job</h2>
-                    <input type="text" class="input" placeholder="Position" />
-                    <input type="text" class="input" placeholder="Entreprise" />
+                    <input type="text" id="positionInput" class="input" placeholder="Position" />
+                    <input type="text" id="entrepriseInput" class="input" placeholder="Entreprise" />
                     <div class="dataBox">
-                        <input placeholder="From" class="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
-                        <input placeholder="To" class="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+                        <input placeholder="From" class="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="jobFromInput">
+                        <input placeholder="To" class="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="jobToInput">
                     </div>
-                    <textarea class="input" cols="30" rows="3" placeholder="Write about it..."></textarea>
+                    <textarea id="aboutJobInput" class="input" cols="30" rows="3" placeholder="Write about it..."></textarea>
                     <input type="button" class="previous action-button" value="Previous" />
-                    <input type="button" class="next action-button" value="Next" />
+                    <input type="button" id="fifthButton" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset>
                     <h2 class="fs-title">About you</h2>
-                    <textarea class="input" cols="30" rows="10" placeholder="Write about it..."></textarea>
+                    <input type="text" id="headlineInput" class="input" placeholder="Headline" />
+                    <textarea id="aboutYouInput" class="input" cols="30" rows="10" placeholder="Write about it..."></textarea>
                     <input type="button" class="previous action-button" value="Previous" />
-                    <input type="submit" class="submit action-button" value="Submit" />
+                    <input type="submit" id="submitButton" class="submit action-button" value="Submit" />
                 </fieldset>
+
             </form>
 
         </div>
 
         <!-- Project form -->
         <div id="projectsForm" style="display: none">
-            
+            <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+                <!-- The Grid -->
+                <div class="w3-row-padding">
+
+                    <!-- Left Column -->
+                    <div class="w3-third">
+
+                        <div class="w3-white w3-text-grey w3-card-4">
+                            <div class="w3-display-container">
+                                <img src="images/ww.jpg" style="width:100%" alt="Avatar">
+                                <div class="w3-display-bottomleft w3-container w3-text-black">
+                                    <h1 id="firstName">Walter White</h1>
+                                </div>
+                            </div>
+                            <div class="w3-container">
+                                <p>
+                                    <i id="profession" class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>
+                                </p>
+                                <p>
+                                    <i id="adress" class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>
+                                </p>
+                                <p>
+                                    <i id="email" class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>
+                                </p>
+                                <p>
+                                    <i id="phone" class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>
+                                </p>
+                                <hr>
+
+                                <p class="w3-large">
+                                    <b>
+                                        <i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b>
+                                </p>
+                                <p id="firstSkill"></p>
+                                <div class="w3-light-grey w3-round-xlarge w3-small">
+                                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+                                </div>
+                                <p id="secondSkill"></p>
+                                <div class="w3-light-grey w3-round-xlarge w3-small">
+                                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+                                        <div class="w3-center w3-text-white">80%</div>
+                                    </div>
+                                </div>
+                                <p id="thirdSkill"></p>
+                                <div class="w3-light-grey w3-round-xlarge w3-small">
+                                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+                                </div>
+
+                                <br>
+                                <hr>
+
+                                <p class="w3-large w3-text-theme">
+                                    <b>
+                                        <i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b>
+                                </p>
+                                <p id="motherTongue"></p>
+                                <div class="w3-light-grey w3-round-xlarge">
+                                    <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+                                </div>
+                                <p id="firstLanguage"></p>
+                                <div class="w3-light-grey w3-round-xlarge">
+                                    <div class="w3-round-xlarge w3-teal" style="height:24px;width:55%"></div>
+                                </div>
+                                <p id="secondLanguage"></p>
+                                <div class="w3-light-grey w3-round-xlarge">
+                                    <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                        <br>
+
+                        <!-- End Left Column -->
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="w3-twothird">
+
+                        <div class="w3-container w3-card w3-white w3-margin-bottom">
+                            <h2 class="w3-text-grey w3-padding-16">
+                                <i class="fa fa-id-card fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Presentation</h2>
+                            <div class="w3-container">
+                                <h5 class="w3-opacity">
+                                    <b id="headline"></b>
+                                </h5>
+
+                                <p id="aboutYou"></p>
+                                <hr>
+                            </div>
+                        </div>
+
+                        <div class="w3-container w3-card w3-white w3-margin-bottom">
+                            <h2 class="w3-text-grey w3-padding-16">
+                                <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+                            <div class="w3-container">
+                                <h5 id="position" class="w3-opacity">
+
+                                </h5>
+                                <h6 class="w3-text-teal">
+                                    <i class="fa fa-calendar fa-fw w3-margin-right" id="jobDate"></i>
+                                </h6>
+                                <p id="aboutJob"></p>
+                                <hr>
+                            </div>
+                        </div>
+
+                        <div class="w3-container w3-card w3-white">
+                            <h2 class="w3-text-grey w3-padding-16">
+                                <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+                            <div class="w3-container">
+                                <h5 class="w3-opacity">
+                                    <b id="university"></b>
+                                </h5>
+                                <h6 class="w3-text-teal">
+                                    <i class="fa fa-calendar fa-fw w3-margin-right" id="educationDate"></i>
+                                </h6>
+                                <h5 class="w3-opacity">
+                                    <p id="degree"></p>
+                                    <p id="aboutEducation"></p>
+                                    <hr>
+                                </h5>
+                            </div>
+
+                        </div>
+
+                        <!-- End Right Column -->
+                    </div>
+
+                    <!-- End Grid -->
+                </div>
+
+                <!-- End Page Container -->
+            </div>
+
+            <footer class="w3-container w3-teal w3-center w3-margin-top">
+                <p>Find me on social media.</p>
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+                <i class="fa fa-snapchat w3-hover-opacity"></i>
+                <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                <i class="fa fa-twitter w3-hover-opacity"></i>
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+                <p>Powered by
+                    <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+                </p>
+            </footer>
+
         </div>
 
         <!-- Contact form -->
         <div id="contactForm" style="display: none">
 
-            <form action="action_page.php">
-
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-                <label for="country">Country</label>
+            <form>
+                <input type="text" id="fname" placeholder="Your name">
+                <input type="text" id="lname" placeholder="Your last name">
                 <select id="country" name="country">
-                    <option value="australia">Australia</option>
-                    <option value="canada">Canada</option>
-                    <option value="usa">USA</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="USA">USA</option>
+                    <option value="Other">Other</option>
                 </select>
-
-                <label for="subject">Subject</label>
                 <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-                <input type="submit" value="Submit">
+                <input id="submitContact" type="submit" value="submit">
 
             </form>
         </div>
-
 
     </main>
 

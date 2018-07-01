@@ -53,7 +53,7 @@ $(function () {
 // Login
 $(function(){
     $(".login-button").click(function(){
-        $("#login").text("Log out")
+        $("#login").text("Logout")
         .css({"background-color":"black",
             "color":"white"
         });
@@ -66,12 +66,61 @@ $(function(){
     });
 });
 // Logout
+
+// Contact
 $(function(){
-    $("#loginForm").click(function(){
-        $(window).unload(function(){
-            return "Bye now!";
-        })
+    $("#submitContact").click(function(){
+        alert("Dear " + $("#fname").val() + ", your email was sent.");
+    })
+});
+
+
+// Get value from create and put to projects
+$(function(){
+    $("#firstButton").click(function(){
+        $("#firstName").text($("#firstNameInput").val());
+        $("#firstName").append(" " + $("#lastNameInput").val());
+        $("#profession").text($("#professionInput").val());
+        $("#adress").text($("#adressInput").val());
+        $("#phone").text($("#phoneInput").val());
+        $("#email").text($("#emailInput").val());
+        
+    })
+    $("#secondButton").click(function(){
+        $("#motherTongue").text($("#motherTongueInput").val());
+        $("#firstLanguage").text($("#firstLanguageInput").val());
+        $("#secondLanguage").text($("#secondLanguageInput").val());
+
     });
+    $("#thirdButton").click(function(){
+        $("#firstSkill").text($("#firstSkillInput").val());
+        $("#secondSkill").text($("#secondSkillInput").val());
+        $("#thirdSkill").text($("#thirdSkillInput").val());
+
+    });
+    $("#fourthButton").click(function(){
+        $("#university").text($("#universityInput").val());
+        $("#degree").text($("#degreeInput").val());
+        $("#degree").append(" / " + $("#specialityInput").val());
+        $("#educationDate").text($("#educationFromInput").val());
+        $("#educationDate").append(" - " + $("#educationToInput").val());
+        $("#aboutEducation").text($("#aboutEducationInput").val());
+
+    });
+    $("#fifthButton").click(function(){
+        $("#position").text($("#positionInput").val());
+        $("#position").append(" / " + $("#entrepriseInput").val());
+        $("#aboutJob").text($("#aboutJobInput").val());
+        $("#jobDate").text($("#jobFromInput").val());
+        $("#jobDate").append(" - " + $("#jobToInput").val());
+
+    });
+    $("#submitButton").click(function(){
+        $("#headline").text($("#headlineInput").val());
+        $("#aboutYou").text($("#aboutYouInput").val());
+
+    });
+
 });
 
 // Create
