@@ -211,11 +211,9 @@ ul.tabs li.current {
     box-sizing: border-box;
     width: 80%;
     margin: 0 15%;
-    /*stacking fieldsets above each other*/
     position: relative;
 }
 
-/*Hide all except first fieldset*/
 
 #msform fieldset:not(:first-of-type) {
     display: none;
@@ -322,6 +320,7 @@ ul.tabs li.current {
     color: white;
 }
 
+
 /* Create form stop */
 
 /* PROJECT FORM*/
@@ -336,7 +335,6 @@ ul.tabs li.current {
 .logBlur {
     filter: blur(5px);
 }
-
 
 #projectsForm html,
 body,
@@ -420,6 +418,8 @@ input[type=submit]:hover {
     background-color: #f2f2f2;
     padding: 20px;
 }
+
+
 
 /* contact form stop */
 
@@ -583,3 +583,100 @@ input[type=submit]:hover {
 }
 
 /* Menu bar stop */
+
+/* Resposive */
+
+@media only screen and (max-width: 900px) {
+    header img {
+        width: 500px;
+    }
+
+    nav a {
+        width: 50px;
+        left: -40px;
+        font-size: x-small;
+    }
+    nav a:hover {
+        left: 0;
+    }
+    #login {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: medium;
+    }
+    .container {
+        width: 450px;
+    }
+    #msform {
+        width: 600px;
+    }
+    #msform fieldset {
+        margin: 10%;
+    }
+    #progressbar {
+        margin-left: 30px;
+    }
+    #contactForm {
+        width: 400px;
+    }
+    .social-networks{
+        margin-bottom: 10px;
+    }
+    .social-networks a {
+        width: 50px;
+        height: 50px;
+    }
+
+}
+@media only screen and (max-width: 650px) {
+    header img {
+        width: 300px;
+    }
+
+    nav a {
+        width: 50px;
+        left: -40px;
+        font-size: x-small;
+    }
+    
+    #login {
+        padding: 5px;
+        padding-right: 0;
+
+        font-size: x-small;
+        text-align: right;
+    }
+    .login a {
+        width: 50px;
+        right: -30px;
+    }
+    .container {
+        width: 250px;
+        margin-left: 0;
+    }
+    #msform {
+        width: 300px;
+    }
+    #msform fieldset {
+        margin: 10px;
+        padding: 0;
+    }
+    #progressbar {
+        margin-left: 0;
+        padding: 0;
+    }
+    #projectsForm {
+        margin: 30px;
+    }
+    #contactForm {
+        width: 220px;
+    }
+    .social-networks{
+        margin-bottom: 10px;
+    }
+    .social-networks a {
+        width: 50px;
+        height: 50px;
+    }
+
+}
