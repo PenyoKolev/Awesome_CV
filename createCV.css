@@ -66,13 +66,15 @@ nav a:hover {
 
 /* LOGIN - LOGOUT*/
 
-.login, .logout {
+.login,
+.logout {
     position: fixed;
     top: 20px;
     right: 0;
 }
 
-.login a, .logout a{
+.login a,
+.logout a {
     position: absolute;
     right: -80px;
     transition: 0.3s;
@@ -85,7 +87,8 @@ nav a:hover {
     border-radius: 5px 0 0 5px;
 }
 
-.login a:hover, .logout a:hover{
+.login a:hover,
+.logout a:hover {
     right: 0;
 }
 
@@ -102,9 +105,8 @@ nav a:hover {
     margin: 100px auto;
     width: 300px;
     padding: 30px 25px;
-    background:black;
+    background: black;
 }
-
 
 .login-input {
     width: 100%;
@@ -135,6 +137,7 @@ nav a:hover {
     cursor: pointer;
     outline: 0;
 }
+
 /* Login form stop */
 
 /* MAIN */
@@ -186,162 +189,193 @@ ul.tabs li.current {
 .tab-content.current {
     display: inherit;
 }
+
 /* About form stop */
 
 /* CREATE FORM */
 
 #msform {
-	width: 800px;
-	margin: 50px auto;
-	text-align: center;
-	position: relative;
+    width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
 }
 
 #msform fieldset {
     background: black;
-	border: 0 none;
-	border-radius: 3px;
-	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
     padding: 20px 30px;
     padding-top: 0;
-	box-sizing: border-box;
-	width: 80%;
-	margin: 0 15%;
-	
-	/*stacking fieldsets above each other*/
-	position: relative;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 15%;
+    /*stacking fieldsets above each other*/
+    position: relative;
 }
-
 
 /*Hide all except first fieldset*/
+
 #msform fieldset:not(:first-of-type) {
-	display: none;
-}
-#msform .input {
-	padding: 15px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-    margin-bottom: 0;
-    margin-top: 6px;
-	width: 100%;
-	box-sizing: border-box;
-	font-family: montserrat;
-	color: black;
-	font-size: 13px;
+    display: none;
 }
 
+#msform .input {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 0;
+    margin-top: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: black;
+    font-size: 13px;
+}
 
 .dataBox .date {
     width: 49%;
     display: inline-box;
     padding: 15px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	margin-bottom: 0px;
-	box-sizing: border-box;
-	font-family: montserrat;
-	color: black;
-	font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: black;
+    font-size: 13px;
 }
+
 #msform .action-button {
-	width: 100px;
-	background: #27AE60;
-	font-weight: bold;
-	color: white;
-	border: 0 none;
-	border-radius: 1px;
-	cursor: pointer;
-	padding: 10px 5px;
-	margin: 10px 5px;
+    width: 100px;
+    background: #27AE60;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
 }
-#msform .action-button:hover, #msform .action-button:focus {
-	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
 }
+
 .fs-title {
-	font-size: 15px;
-	text-transform: uppercase;
-	color: white;
-	margin-bottom: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 10px;
 }
 
 #progressbar {
     margin-bottom: 0;
     margin-left: 75px;
-	overflow: hidden;
+    overflow: hidden;
     counter-reset: step;
 }
 
 #progressbar li {
-	list-style-type: none;
-	color: white;
-	text-transform: uppercase;
-	font-size: 9px;
-	width: 15%;
-	float: left;
-	position: relative;
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 15%;
+    float: left;
+    position: relative;
 }
+
 #progressbar li:before {
-	content: counter(step);
-	counter-increment: step;
-	width: 20px;
-	line-height: 20px;
-	display: block;
-	font-size: 10px;
-	color: #333;
-	background: white;
-	border-radius: 3px;
-	margin: 0 auto 5px auto;
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    color: #333;
+    background: white;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
 }
-/*progressbar connectors*/
+
 #progressbar li:after {
-	content: '';
-	width: 100%;
-	height: 2px;
-	background: white;
-	position: absolute;
-	left: -50%;
-	top: 9px;
-	z-index: -1; /*put it behind the numbers*/
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1;
 }
+
 #progressbar li:first-child:after {
-	/*connector not needed before the first step*/
-	content: none; 
+    content: none;
 }
-/*marking active/completed steps green*/
-/*The number of the step and the connector before it = green*/
-#progressbar li.active:before,  #progressbar li.active:after{
-	background: #27AE60;
-	color: white;
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #27AE60;
+    color: white;
 }
 
 /* Create form stop */
 
 /* PROJECT FORM*/
+
 #projectsForm {
     margin: 100px;
     background-color: lightgrey;
+    display: inline-block;
+    position: relative;
 }
-#projectsForm html,body,h1,h2,h3,h4,h5,h6 {
+
+.logBlur {
+    filter: blur(5px);
+}
+
+
+#projectsForm html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Roboto", sans-serif;
 }
-#projectsForm h1, h2, h3, h4, h5, h6, p {
+
+#projectsForm h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     color: black;
 }
-.w3-row-padding >* {
+
+.w3-row-padding>* {
     margin-top: 16px;
 }
 
+#firstName {
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
 
-
-    
 /* Project form stop */
 
 /* CONTACT FORM */
 
 #contactForm {
     width: 600px;
-	margin: 50px auto;
-	text-align: center;}
+    margin: 50px auto;
+    text-align: center;
+}
 
 /* Style inputs with type="text", select elements and textareas */
 
@@ -356,6 +390,7 @@ textarea {
     margin-top: 6px;
     margin-bottom: 6px;
 }
+
 #country {
     margin-top: 6px;
     margin-bottom: 12px;
@@ -385,7 +420,9 @@ input[type=submit]:hover {
     background-color: #f2f2f2;
     padding: 20px;
 }
+
 /* contact form stop */
+
 /* Main stop */
 
 /* FOOTER */
@@ -530,6 +567,7 @@ input[type=submit]:hover {
     margin: 0;
     padding: 0px 15px 10px;
 }
+
 /* Footer stop */
 
 /* MENU BAR */
@@ -543,4 +581,5 @@ input[type=submit]:hover {
     padding: 0;
     display: table-cell;
 }
+
 /* Menu bar stop */

@@ -11,6 +11,7 @@ $(function () {
         $("#aboutForm").toggle("slow");
         $("header img").toggle("slow");
         $("#footer").toggle("slow");
+        
 
     });
 
@@ -51,82 +52,98 @@ $(function () {
 
 });
 // Login
-$(function(){
-    $(".login-button").click(function(){
+$(function () {
+    $(".login-button").click(function () {
         $("#login").text("Logout")
-        .css({"background-color":"black",
-            "color":"white"
-        });
+            .css({
+                "background-color": "black",
+                "color": "white"
+            });
         $("#loginForm").css("display", "none");
         $("header img").toggle("slow");
         $("#footer").toggle("slow");
         $(".login").attr("class", "logout");
         $("#loginForm").empty()
-        .append("<form action='http://google.com'><input type='submit' value='Leave this site?' style='height:150px; width:250px'></form>");
+            .append("<form action='http://google.com'><input type='submit' value='Leave this site?' style='height:150px; width:250px'></form>");
+        $(".logBlur").css("filter", "none");
+        $("#logMessage").empty();
+
     });
 });
 // Logout
 
 // Contact
-$(function(){
-    $("#submitContact").click(function(){
+$(function () {
+    $("#submitContact").click(function () {
         alert("Dear " + $("#fname").val() + ", your email was sent.");
     })
 });
 
 
 // Get value from create and put to projects
-$(function(){
-    $("#firstButton").click(function(){
+$(function () {
+    $("#firstButton").click(function () {
         $("#firstName").text($("#firstNameInput").val());
         $("#firstName").append(" " + $("#lastNameInput").val());
-        $("#profession").text($("#professionInput").val());
-        $("#adress").text($("#adressInput").val());
-        $("#phone").text($("#phoneInput").val());
-        $("#email").text($("#emailInput").val());
-        
+        $("#profession").text(" " + $("#professionInput").val());
+        $("#adress").text(" " + $("#adressInput").val());
+        $("#phone").text(" " + $("#phoneInput").val());
+        $("#email").text(" " + $("#emailInput").val());
+
     })
-    $("#secondButton").click(function(){
+    $("#secondButton").click(function () {
         $("#motherTongue").text($("#motherTongueInput").val());
         $("#firstLanguage").text($("#firstLanguageInput").val());
+        $("#languageRange1").css("width", $("#languageRange1Input").val() * 30);
         $("#secondLanguage").text($("#secondLanguageInput").val());
+        $("#languageRange2").css("width", $("#languageRange2Input").val() * 30);
 
     });
-    $("#thirdButton").click(function(){
+    $("#thirdButton").click(function () {
         $("#firstSkill").text($("#firstSkillInput").val());
+        $("#skillsRange1").css("width", $("#skillsRange1Input").val() * 30);
+        $("#skillsRange1").text($("#skillsRange1Input").val() * 10 + "%");
         $("#secondSkill").text($("#secondSkillInput").val());
+        $("#skillsRange2").css("width", $("#skillsRange2Input").val() * 30);
+        $("#skillsRange2").text($("#skillsRange2Input").val() * 10 + "%");
         $("#thirdSkill").text($("#thirdSkillInput").val());
+        $("#skillsRange3").css("width", $("#skillsRange3Input").val() * 30);
+        $("#skillsRange3").text($("#skillsRange3Input").val() * 10 + "%");
+
 
     });
-    $("#fourthButton").click(function(){
+    $("#fourthButton").click(function () {
         $("#university").text($("#universityInput").val());
         $("#degree").text($("#degreeInput").val());
         $("#degree").append(" / " + $("#specialityInput").val());
         $("#educationDate").text($("#educationFromInput").val());
-        $("#educationDate").append(" - " + $("#educationToInput").val());
+        $("#educationDate").append(" : " + $("#educationToInput").val());
         $("#aboutEducation").text($("#aboutEducationInput").val());
 
     });
-    $("#fifthButton").click(function(){
+    $("#fifthButton").click(function () {
         $("#position").text($("#positionInput").val());
         $("#position").append(" / " + $("#entrepriseInput").val());
         $("#aboutJob").text($("#aboutJobInput").val());
         $("#jobDate").text($("#jobFromInput").val());
-        $("#jobDate").append(" - " + $("#jobToInput").val());
+        $("#jobDate").append(" : " + $("#jobToInput").val());
 
     });
-    $("#submitButton").click(function(){
+    $("#submitButton").click(function () {
         $("#headline").text($("#headlineInput").val());
         $("#aboutYou").text($("#aboutYouInput").val());
+        $("#createForm").toggle("slow");
+        $("header img").toggle("slow");
+        $("#footer").toggle("slow");
 
     });
 
 });
 
 // Create
-var current_fs, next_fs, previous_fs; //fieldsets
-var left, opacity, scale; //fieldset properties which we will animate
-var animating; //flag to prevent quick multi-click glitches
+var current_fs, next_fs, previous_fs;
+var left, opacity, scale;
+var animating;
 $(function () {
 
     $(".next").click(function () {
@@ -136,22 +153,15 @@ $(function () {
         current_fs = $(this).parent();
         next_fs = $(this).parent().next();
 
-        //activate next step on progressbar using the index of next_fs
         $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 
-        //show the next fieldset
         next_fs.show();
-        //hide the current fieldset with style
         current_fs.animate({
             opacity: 0
         }, {
             step: function (now, mx) {
-                //as the opacity of current_fs reduces to 0 - stored in "now"
-                //1. scale current_fs down to 80%
                 scale = 1 - (1 - now) * 0.2;
-                //2. bring next_fs from the right(50%)
                 left = (now * 50) + "%";
-                //3. increase opacity of next_fs to 1 as it moves in
                 opacity = 1 - now;
                 current_fs.css({
                     'transform': 'scale(' + scale + ')',
@@ -177,22 +187,15 @@ $(function () {
         current_fs = $(this).parent();
         previous_fs = $(this).parent().prev();
 
-        //de-activate current step on progressbar
         $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
 
-        //show the previous fieldset
         previous_fs.show();
-        //hide the current fieldset with style
         current_fs.animate({
             opacity: 0
         }, {
             step: function (now, mx) {
-                //as the opacity of current_fs reduces to 0 - stored in "now"
-                //1. scale previous_fs from 80% to 100%
                 scale = 0.8 + (1 - now) * 0.2;
-                //2. take current_fs to the right(50%) - from 0%
                 left = ((1 - now) * 50) + "%";
-                //3. increase opacity of previous_fs to 1 as it moves in
                 opacity = 1 - now;
                 current_fs.css({
                     'left': left
