@@ -35,7 +35,7 @@ $(function () {
         $("#footer").toggle("slow");
 
     });
-}); 
+});
 
 // About
 $(function () {
@@ -70,7 +70,6 @@ $(function () {
 
     });
 });
-// Logout
 
 // Contact
 $(function () {

@@ -11,7 +11,7 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>TODO</title>
+    <title>createCV</title>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
     </script>
     <script src="createCV.js"></script>
@@ -40,6 +40,7 @@
             <li>
                 <a href="#" id="contact">Contact</a>
             </li>
+            
         </ul>
     </nav>
 
@@ -50,7 +51,7 @@
 
     <!-- Login form-->
     <form id="loginForm" class="loginForm" style="display: none;">
-        <input type="email" class="login-input" placeholder="Email Adress">
+        <input id="inputEmail" type="email" class="login-input" placeholder="Email Adress">
         <input type="password" class="login-input" placeholder="Password">
         <input type="submit" value="Let`s Go" class="login-button">
     </form>
@@ -71,39 +72,28 @@
 
                 <div id="tab-1" class="tab-content current">
                     Are you tired of compiling your CVs in Word every time?
-                    <br>
-                    Leave this in the past.
-                    <br>
-                    Our new website CreateCV allows you to create your web-CV in just a few clicks.
-                    <br>
-                    Make sure to excel in front of your future employers.
-                    <br>
-                    Learn how by clicking on the next tab.
+                    <br> Leave this in the past.
+                    <br> Our new website CreateCV allows you to create your web-CV in just a few clicks.
+                    <br> Make sure to excel in front of your future employers.
+                    <br> Learn how by clicking on the next tab.
 
                 </div>
                 <div id="tab-2" class="tab-content">
                     Please log in first to see the contents of the Projects section.
-                    <br>
-                    If you are not logged in you will be able to see only a blurred image.
-                    <br>
-                    Then click on the Create section.
-                    <br>
-                    To learn how to use it, click on the next tab.
+                    <br> If you are not logged in you will be able to see only a blurred image.
+                    <br> Then click on the Create section.
+                    <br> To learn how to use it, click on the next tab.
                 </div>
                 <div id="tab-3" class="tab-content">
                     It is simple.
-                    <br>
-                    Just fill in the fields as requested.
-        
+                    <br> Just fill in the fields as requested.
+
                 </div>
                 <div id="tab-4" class="tab-content">
                     Don`t forget to rate us,
-                    <br>
-                    to share us and of course,
-                    <br>
-                    if you have any questions, 
-                    <br> 
-                    make sure to contact us using the Contact form.
+                    <br> to share us and of course,
+                    <br> if you have any questions,
+                    <br> make sure to contact us using the Contact form.
                     <br>
                     <h1>Let the fun start here!</h1>
                 </div>
@@ -199,7 +189,7 @@
 
         <!-- Project form -->
         <div id="projectsForm" style="display: none">
-           
+
             <h1 id="logMessage">Log in to see content</h1>
 
             <div class="w3-content w3-margin-top logBlur" style="max-width:1400px;">
@@ -405,9 +395,6 @@
             </a>
         </p>
     </footer>
-
-
-
 </body>
 
 </html>
