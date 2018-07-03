@@ -42,6 +42,11 @@ nav a:hover {
     left: 0;
 }
 
+#home {
+    top: 0;
+    background-color: black;
+}
+
 #about {
     top: 20px;
     background-color: #4CAF50;
@@ -63,6 +68,20 @@ nav a:hover {
 }
 
 /* Navigation stop */
+
+/* MENU BAR */
+
+.menu {
+    line-height: 18px;
+    text-align: left;
+    overflow: hidden;
+    width: 175px;
+    list-style-type: none;
+    padding: 0;
+    display: table-cell;
+}
+
+/* Menu bar stop */
 
 /* LOGIN - LOGOUT*/
 
@@ -152,37 +171,42 @@ p {
 
 /* ABOUT FORM */
 
-.tabs {
-    text-align: center;
-}
-
 .container {
+    border-radius: 5px;
+    background-color: darkgray;
+    padding: 20px;
     width: 800px;
     margin: 0 auto;
+}
+
+.tabs {
+    text-align: center;
 }
 
 ul.tabs {
     margin: 0px;
     padding: 0px;
     list-style: none;
+    background-color: black;
 }
 
 ul.tabs li {
-    background: none;
-    color: #222;
+    color: white;
     display: inline-block;
     padding: 10px 15px;
     cursor: pointer;
 }
 
 ul.tabs li.current {
-    background: #ededed;
-    color: #222;
+    background: black;
+    color: #f44336;
 }
 
 .tab-content {
     display: none;
-    background: #ededed;
+    text-align: center;
+    color: white;
+    background: black;
     padding: 15px;
 }
 
@@ -213,7 +237,6 @@ ul.tabs li.current {
     margin: 0 15%;
     position: relative;
 }
-
 
 #msform fieldset:not(:first-of-type) {
     display: none;
@@ -320,6 +343,40 @@ ul.tabs li.current {
     color: white;
 }
 
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    border-radius: 25px;
+    background-color: #555;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 7.5px;
+    background: green;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -5px;
+}
+
+
+
+
+
+
+
 
 /* Create form stop */
 
@@ -405,21 +462,9 @@ input[type=submit] {
     cursor: pointer;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
-
 input[type=submit]:hover {
     background-color: #45a049;
 }
-
-/* Add a background color and some padding around the form */
-
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
-
-
 
 /* contact form stop */
 
@@ -570,27 +615,12 @@ input[type=submit]:hover {
 
 /* Footer stop */
 
-/* MENU BAR */
-
-.menu {
-    line-height: 18px;
-    text-align: left;
-    overflow: hidden;
-    width: 175px;
-    list-style-type: none;
-    padding: 0;
-    display: table-cell;
-}
-
-/* Menu bar stop */
-
 /* Resposive */
 
 @media only screen and (max-width: 900px) {
     header img {
         width: 500px;
     }
-
     nav a {
         width: 50px;
         left: -40px;
@@ -619,30 +649,27 @@ input[type=submit]:hover {
     #contactForm {
         width: 400px;
     }
-    .social-networks{
+    .social-networks {
         margin-bottom: 10px;
     }
     .social-networks a {
         width: 50px;
         height: 50px;
     }
-
 }
+
 @media only screen and (max-width: 650px) {
     header img {
         width: 300px;
     }
-
     nav a {
         width: 50px;
         left: -40px;
         font-size: x-small;
     }
-    
     #login {
         padding: 5px;
         padding-right: 0;
-
         font-size: x-small;
         text-align: right;
     }
@@ -671,12 +698,11 @@ input[type=submit]:hover {
     #contactForm {
         width: 220px;
     }
-    .social-networks{
+    .social-networks {
         margin-bottom: 10px;
     }
     .social-networks a {
         width: 50px;
         height: 50px;
     }
-
 }

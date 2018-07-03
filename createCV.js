@@ -11,7 +11,7 @@ $(function () {
         $("#aboutForm").toggle("slow");
         $("header img").toggle("slow");
         $("#footer").toggle("slow");
-        
+
 
     });
 
@@ -35,7 +35,7 @@ $(function () {
         $("#footer").toggle("slow");
 
     });
-});
+}); 
 
 // About
 $(function () {
